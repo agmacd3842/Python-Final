@@ -1,15 +1,15 @@
 ###Convert GPX to feature
 import arcpy
 from arcpy import env
-data = raw_input("")
-if  data = '.gpx':
+data = ("")
+if  data == '.gpx':
     env.overwriteoutput = True
     arcpy.GPXtoFeatures_conversion(data, 'newfile')
-    arcpy.SelectLayerByAttribute_management('newfile', 'NEW_SELECTION', "/" Type /" = 'TRKPT'")
+    arcpy.SelectLayerByAttribute_management('newfile', 'NEW_SELECTION', "/""Type"/" = 'TRKPT'")
     arcpy.PointsToLine_management('newfile', 'P:/gitprojects/python_project/Python_Final/newfile.shp', 'Name', '#', 'NO_CLOSE')
 ###Convert KML to Layer
-elif data = 'kml':
-    outLocation = ["CURRENT"]
+elif data == 'kml':
+    outLocation == ["CURRENT"]
     MasterGDB = ["CURRENT"]
     MasterGDBLocation = ["CURRENT"]
     arcpy.CreateFileGDB_management(outLocation, MasterGDB)
